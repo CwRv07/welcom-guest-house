@@ -37,6 +37,9 @@ dependencies:
 
   # 路由插件
   fluro: ^2.0.3
+  # 导航栏
+  flutter_swiper_null_safety: 
+    path: plugins/flutter_swiper_flutter3
 
 dev_dependencies:
   flutter_test:
@@ -61,9 +64,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    # indexRecommend
+    - static/images/home_index_recommend_1.png
+    - static/images/home_index_recommend_2.png
+    - static/images/home_index_recommend_3.png
+    - static/images/home_index_recommend_4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

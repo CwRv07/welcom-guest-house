@@ -76,6 +76,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  flutter_swiper_null_safety:
+    dependency: "direct main"
+    description:
+      path: "plugins/flutter_swiper_flutter3"
+      relative: true
+    source: path
+    version: "1.0.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
