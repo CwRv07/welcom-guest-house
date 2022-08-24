@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_guest_house/widgets/PageContent.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   bool showPassword = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('登录'),
+        title: Text('注册'),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -28,7 +29,9 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: "请输入账号",
                   prefixIcon: Icon(Icons.person)),
             ),
-            SizedBox(height: 20.0,),
+            SizedBox(
+              height: 20.0,
+            ),
             TextField(
               obscureText: !showPassword,
               decoration: InputDecoration(
@@ -47,13 +50,34 @@ class _LoginPageState extends State<LoginPage> {
                 // border: OutlineInputBorder(borderSide: BorderSide(width: 1.0))
               ),
             ),
-            SizedBox(height: 20.0,),
-            ElevatedButton(onPressed: () {}, child: Text('登录')),
+            SizedBox(
+              height: 20.0,
+            ),
+            TextField(
+              obscureText: !showPassword,
+              decoration: InputDecoration(
+                labelText: "重复密码",
+                hintText: "请重复输入密码",
+                prefixIcon: Icon(Icons.lock),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      showPassword ? Icons.visibility_off : Icons.visibility),
+                  onPressed: () {
+                    setState(() {
+                      showPassword = !showPassword;
+                    });
+                  },
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('注册')),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(onPressed: () {}, child: Text('找回密码')),
-                TextButton(onPressed: () {}, child: Text('前往注册'))
+                TextButton(onPressed: () {}, child: Text('返回登录'))
               ],
             )
           ],

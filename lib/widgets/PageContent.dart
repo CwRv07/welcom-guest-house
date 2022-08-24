@@ -9,32 +9,36 @@ class PageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(name)),
+      appBar: AppBar(
+        title: Text(name),
+        centerTitle: true,
+      ),
       body: ListView(children: [
         TextButton(
             onPressed: () {
               Navigator.pushNamed(context, Routes.home);
             },
-            child: Text(Routes.home)
-        ),
+            child: Text(Routes.home)),
         TextButton(
             onPressed: () {
               Navigator.pushNamed(context, Routes.login);
             },
-            child: Text(Routes.login)
-        ),
+            child: Text(Routes.login)),
+        TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.register);
+            },
+            child: Text(Routes.register)),
         TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/detail/123');
             },
-            child: Text(Routes.roomDetail)
-        ),
+            child: Text(Routes.roomDetail)),
         TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/notFound');
             },
-            child: const Text('/notFound')
-        ),
+            child: const Text('/notFound')),
       ]),
     );
   }
