@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_guest_house/widgets/newsInfomation/index.dart';
+import 'package:welcome_guest_house/widgets/searchBar/index.dart';
 
 class TabInfoPage extends StatefulWidget {
   const TabInfoPage({Key? key}) : super(key: key);
@@ -13,8 +14,8 @@ class _TabInfoPageState extends State<TabInfoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('资讯'),
-          centerTitle: true,
+          title: SearchBar(),
+          backgroundColor: Colors.white,
         ),
         body: Container(
           child: ListView(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_guest_house/pages/home/tabsearch/searchItem.dart';
+import 'package:welcome_guest_house/widgets/searchBar/index.dart';
 import 'data.dart';
 
 class TabSearchPage extends StatelessWidget {
@@ -9,9 +10,9 @@ class TabSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('搜索'),
-          centerTitle: true,
-        ),
+        title: SearchBar(),
+        backgroundColor: Colors.white,
+      ),
         body: Column(children: [
           Container(
             height: 90.0,

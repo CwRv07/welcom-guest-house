@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_guest_house/pages/home/tabIndex/indexRecommend/index.dart';
 import 'package:welcome_guest_house/widgets/newsInfomation/index.dart';
+import 'package:welcome_guest_house/widgets/searchBar/index.dart';
 import 'indexNavigate/index.dart';
 import 'package:welcome_guest_house/widgets/CommonSwiper.dart';
 
@@ -11,8 +12,8 @@ class TabIndexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('首页'),
-        centerTitle: true,
+        title: SearchBar(),
+        backgroundColor: Colors.white,
       ),
       body: ListView(children: const [
         CommonSwiper(),
