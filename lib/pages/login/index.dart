@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_guest_house/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('登录'),
+        backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
       ),
       body: SafeArea(
@@ -28,7 +30,9 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: "请输入账号",
                   prefixIcon: Icon(Icons.person)),
             ),
-            SizedBox(height: 20.0,),
+            SizedBox(
+              height: 20.0,
+            ),
             TextField(
               obscureText: !showPassword,
               decoration: InputDecoration(
@@ -47,13 +51,19 @@ class _LoginPageState extends State<LoginPage> {
                 // border: OutlineInputBorder(borderSide: BorderSide(width: 1.0))
               ),
             ),
-            SizedBox(height: 20.0,),
+            SizedBox(
+              height: 20.0,
+            ),
             ElevatedButton(onPressed: () {}, child: Text('登录')),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(onPressed: () {}, child: Text('找回密码')),
-                TextButton(onPressed: () {}, child: Text('前往注册'))
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.register);
+                    },
+                    child: Text('前往注册'))
               ],
             )
           ],

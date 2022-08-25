@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:welcome_guest_house/pages/home/tabsearch/searchItem.dart';
+import 'searchItem/searchItem.dart';
 import 'package:welcome_guest_house/widgets/searchBar/index.dart';
-import 'data.dart';
+import 'searchItem/data.dart';
 
 class TabSearchPage extends StatelessWidget {
   const TabSearchPage({Key? key}) : super(key: key);
@@ -14,10 +14,10 @@ class TabSearchPage extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
         body: Column(children: [
-          Container(
-            height: 90.0,
-            color: Colors.red,
-          ),
+          // Container(
+          //   height: 90.0,
+          //   color: Colors.red,
+          // ),
           Expanded(
             child: ListView(
               padding: EdgeInsets.only(top: 10.0),

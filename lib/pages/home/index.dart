@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_guest_house/pages/home/tabIndex/index.dart';
 import 'package:welcome_guest_house/pages/home/tabInfo/index.dart';
+import 'package:welcome_guest_house/pages/home/tabProfile/index.dart';
 import 'package:welcome_guest_house/pages/home/tabsearch/index.dart';
 import 'package:welcome_guest_house/widgets/PageContent.dart';
 
@@ -9,7 +10,7 @@ List<Widget> tabViewList = [
   TabIndexPage(),
   TabSearchPage(),
   TabInfoPage(),
-  PageContent(name: '我的')
+  TabProfilePage()
 ];
 
 /* BottomNavigationBarItem */

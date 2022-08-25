@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:welcome_guest_house/routes.dart';
 import 'package:welcome_guest_house/widgets/PageContent.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -16,6 +17,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('注册'),
+        backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
       ),
       body: SafeArea(
@@ -77,7 +79,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(onPressed: () {}, child: Text('返回登录'))
+                TextButton(onPressed: () {Navigator.pushNamed(context, Routes.login);}, child: Text('返回登录'))
               ],
             )
           ],

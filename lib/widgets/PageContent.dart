@@ -11,6 +11,7 @@ class PageContent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(name),
+        backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
       ),
       body: ListView(children: [
