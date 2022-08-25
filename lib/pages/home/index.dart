@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_guest_house/pages/home/tabIndex/index.dart';
 import 'package:welcome_guest_house/pages/home/tabInfo/index.dart';
+import 'package:welcome_guest_house/pages/home/tabsearch/index.dart';
 import 'package:welcome_guest_house/widgets/PageContent.dart';
 
 /* 页面 */
 List<Widget> tabViewList = [
   TabIndexPage(),
-  PageContent(name: '搜索'),
+  TabSearchPage(),
   TabInfoPage(),
   PageContent(name: '我的')
 ];
