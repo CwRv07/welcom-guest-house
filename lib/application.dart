@@ -13,6 +13,7 @@ class Application extends StatelessWidget {
       title: '好客租房',
       theme: ThemeData(primaryColor: Colors.lightBlue),
       onGenerateRoute: router.generator,
+      initialRoute: "/loading",
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
+import 'package:welcome_guest_house/loading.dart';
 import 'package:welcome_guest_house/pages/home/index.dart';
 import 'package:welcome_guest_house/pages/notFound/index.dart';
 import 'package:welcome_guest_house/pages/register/index.dart';
@@ -12,6 +13,7 @@ class Routes {
   static String login = '/login';
   static String register = '/register';
   static String roomDetail = '/detail/:roomId';
+  static String loading = '/loading';
 
   /* rootHandler */
   static var notFoundHandler = Handler(
@@ -34,6 +36,10 @@ class Routes {
       handlerFunc: (BuildContext? content, Map<String, List<String>> params) {
     return RoomDetailPage(roomId: params['roomId']![0]);
   });
+  static var loadingHandler = Handler(
+      handlerFunc: (BuildContext? content, Map<String, List<String>> params) {
+    return LoadingPage();
+  });
 
   /* configureRoutes */
   static void configureRoutes(FluroRouter router) {
@@ -42,5 +48,6 @@ class Routes {
     router.define(login, handler: loginHandler);
     router.define(register, handler: registerHandler);
     router.define(roomDetail, handler: roomDetailHandler);
+    router.define(loading, handler: loadingHandler);
   }
 }
